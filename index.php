@@ -24,13 +24,12 @@ function fn_cre_payment() {
         $post_url = "https://test.authorize.net/gateway/transact.dll";
     }
     if(isset($_POST['submit_this_payment'])){
-        echo '<h3>Submitting details, please wait....</h3>';
     include_once 'anet_php_sdk/AuthorizeNet.php';
         $amount = $_POST['x_amount'];
 	$fp_timestamp = time();
 	$fp_sequence = "LAM-" . time(); 
 	$fingerprint = AuthorizeNetSIM_Form::getFingerprint($auth_login_id,  $auth_transction_id,$amount, $fp_sequence, $fp_timestamp);
-         $html .= '<form method="post" action="' . $post_url . '" name="paymentform">
+         $html .= '<h3>Submitting details, please wait....</h3><form method="post" action="' . $post_url . '" name="paymentform">
         <input type="hidden" name="x_login" value="'.$auth_login_id.'" />
 	<input type="hidden" name="x_fp_hash" value="'.$fingerprint.'" />
 	<input type="hidden" name="x_fp_timestamp" value="'.$fp_timestamp.'" />
