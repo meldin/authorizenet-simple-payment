@@ -1,9 +1,9 @@
 <?php
 /*
   Plugin Name: Authorize.net Payments
-  Author: Crezom Technologies
-  Author URI: https://crezom.com
-  Plugin URL: https://crezom.com
+  Author: Meldin Xavier
+  Author URI: https://mxtechweb.com
+  Plugin URL: https://mxtechweb.com/authorizenet-simple-payment
   Description: Accept payments with Authorize.net. Easy to use.
   Version: 1.0
   License: GPLv2 or later
